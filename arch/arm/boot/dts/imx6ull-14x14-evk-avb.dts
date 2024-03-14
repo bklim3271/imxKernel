@@ -1,0 +1,34 @@
+/*
+ * Copyright 2022 NXP
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ */
+
+#include "imx6ull-14x14-evk.dts"
+
+/* AVB HW timer*/
+&epit1 {
+	compatible = "fsl,avb-epit";
+	clocks = <&clks IMX6UL_CLK_EPIT1>;
+	clock-names = "epit1";
+
+	status = "okay";
+};
+
+&fec1 {
+	fsl,rx-phy-delay-100-ns = <670>;
+	fsl,tx-phy-delay-100-ns = <670>;
+	fsl,rx-phy-delay-1000-ns = <0>;
+	fsl,tx-phy-delay-1000-ns = <0>;
+};
+
+&fec2 {
+	fsl,rx-phy-delay-100-ns = <670>;
+	fsl,tx-phy-delay-100-ns = <670>;
+	fsl,rx-phy-delay-1000-ns = <0>;
+	fsl,tx-phy-delay-1000-ns = <0>;
+};
+

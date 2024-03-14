@@ -1,0 +1,23 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Copyright 2022 NXP
+ */
+
+/ {
+	reserved-memory {
+		#address-cells = <2>;
+		#size-cells = <2>;
+		ranges;
+
+		sgi_mbox_reserved: sgi-mbox@b8500000 {
+			reg = <0 0xb8500000 0 0x1000>;
+			no-map;
+		};
+	};
+
+	sgi_mailbox: sgi-mailbox@b8500000 {
+		compatible = "fsl,arm-sgi-mbox";
+		reg = <0 0xb8500000 0 0x1000>;
+		#mbox-cells = <2>;
+	};
+};
