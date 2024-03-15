@@ -14,7 +14,8 @@
          
     pinctrl_hog: hoggrp {
         fsl,pins = < 
-            MX8MM_IOMUXC_ECSPI1_MOSI_GPIO5_IO7 0x19 
+            MX8MM_IOMUXC_ECSPI1_MOSI_GPIO5_IO7 0x19
+            MX8MM_IOMUXC_ECSPI1_MISO_GPIO5_IO8 0x19
             >;
     };
 };
@@ -33,5 +34,11 @@
         output-high;
      };
 
+    gpio_hog_demo1 {
+        gpio-hog1;
+        gpios1 = <7 0>;
+       /* output-low;*/
+        output-high;
+     };
 
 };
